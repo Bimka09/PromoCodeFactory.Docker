@@ -2,16 +2,10 @@
 
 namespace Otus.Teaching.PromoCodeFactory.DataAccess.Data
 {
-    public class EfDbInitializer
-        : IDbInitializer
+    public class EfDbInitializer(DataContext dataContext) : IDbInitializer
     {
-        private readonly DataContext _dataContext;
+        private readonly DataContext _dataContext = dataContext;
 
-        public EfDbInitializer(DataContext dataContext)
-        {
-            _dataContext = dataContext;
-        }
-        
         public void InitializeDb()
         {
             _dataContext.Database.EnsureDeleted();

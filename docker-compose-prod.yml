@@ -2,7 +2,7 @@ services:
 
   #Api
   promocode-factory-api:                             
-    image: 'bimkan/promocode-factory-api:1.0'
+    image: 'bimkan/promocode-factory-api:2.0'
     restart: always
     ports:
       - "8091:8080"
